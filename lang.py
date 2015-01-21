@@ -5,11 +5,28 @@ from IPython.terminal.embed import InteractiveShellEmbed
 from colorama import Fore, init
 
 class PyToy:
-    def __init__ (self,path=None):
+    def __init__ (self,path=None,version='1.0',name="Untitled"):
+        """
+        Initiation. path for a easy variable. version is the app's version. name for the name of the project
+        Example:
+            toy = lang.PyToy(path="/",version="0.1",name="PyToy")
+        """
+        self.version=version
+        self.name=name
+        self.tab = "\t"
+        self.nl="\n"
+        self.ws = " "
         init()
         if path != None:
             self.opPath = path
     def exe(self,cmd):
+        """
+        For executing commands from the command line. cmd is the command.
+        Example:
+            toy.exe("ECHO Hi!")
+        :param cmd:
+        :return:
+        """
         call(cmd,shell=True)
     def set_shell_color(self,color):
         call("color "+color,shell=True)
@@ -22,7 +39,7 @@ class PyToy:
             print(Fore.BLUE + s)
         if c == 'purple':
             print(Fore.PURPLE + s)
-    def startIPython(self):
+    def ipy(self):
         self.ipshell = InteractiveShellEmbed()
         self.ipshell()
     def stdin(self):
