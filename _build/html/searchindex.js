@@ -1,0 +1,1 @@
+Search.setIndex({objects:{},filenames:["index"],titleterms:{indic:0,welcom:0,tabl:0,pytoi:0,document:0},objnames:{},titles:["Welcome to PyToy&#8217;s documentation!"],terms:{content:0,search:0,modul:0,page:0,index:0},envversion:43,objtypes:{}})
